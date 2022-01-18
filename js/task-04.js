@@ -7,6 +7,7 @@ incrBtnEl.addEventListener('click', onTargetIncrBtnClick);
 
 
 let counterValue = Number(valueEl.textContent);
+// let counterValue = 0;
 
 function onTargetDecrBtnClick () {
     counterValue -= 1;

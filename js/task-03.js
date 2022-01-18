@@ -14,10 +14,20 @@ const images = [
 ];
 
 
+
 const galleryEl = document.querySelector('.gallery');
 
+const imagesGallery = images
+  .map(image => `<li class='gallery-item'><img class='gallery-image' src='${image.url}' alt="${image.alt}" width = "150" height = "100"></li>`)
+  .join("");
 
-images.forEach(image => {
-  galleryEl.insertAdjacentHTML('beforeend', `<li class='gallery-item'><img class='gallery-image' src='${image.url}' alt="${image.alt}" width = "150" height = "100"'></li>`);
-});
 
+galleryEl.insertAdjacentHTML('beforeend', imagesGallery);
+
+
+
+
+// const galleryEl = document.querySelector('.gallery');
+// images.forEach(image => {
+//   galleryEl.insertAdjacentHTML('beforeend', `<li class='gallery-item'><img class='gallery-image' src='${image.url}' alt="${image.alt}" width = "150" height = "100"'></li>`);
+// });
